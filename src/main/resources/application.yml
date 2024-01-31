@@ -1,0 +1,109 @@
+smsSenderId: ANLYTQ
+
+apiEndPoint: https://pay.vpayapp.com/pg/
+#apiEndPoint: http://localhost:8082
+
+payTmEndPoints:
+  payTMNodealGetBalance: https://pass-api.paytmbank.com/api/ts/transaction/ext/v3/user-balance?account_type=
+  payTMNodalBalTransfer:  https://pass-api.paytmbank.com/api/ts/transaction/int/v2/funds-transfer
+  payTMNodalchecktrStatus: https://pass-api.paytmbank.com/api/ts/transaction/int/v1/async/txn-status
+  payTMNodalAddBeneficiary: https://pass-api.paytmbank.com/api/bms/bms/int/v1/nodal/beneficiary
+  payTMNodalDeleteBeneficiary: https://pass-api.paytmbank.com/api/bms/bms/int/v1/nodal/beneficiary/delete
+  payTMNSearchByNickName: https://pass-api.paytmbank.com/api/bms/bms/int/v1/nodal/ben-nickname?BeneficiaryNickName=
+  payTMNSearchByBenId: https://pass-api.paytmbank.com/api/bms/bms/int/v1/nodal/beneficiary/{beneficiaryRefId}
+  payTMVANCreate: https://pass-api.paytmbank.com/api/pms/admin/v1/product/mapping
+  payTMVANStatusUpdate: https://pass-api.paytmbank.com/api/pms/admin/v1/product/mapping
+  payTMVANAllAccountDetails: https://pass-api.paytmbank.com/api/pms/admin/v1/product/mapping
+  payTMVANGetVanDetails: https://pass-api.paytmbank.com/api/pms/admin/v1/product/mapping
+payTmCredentials:
+  nodel:
+    secretId: tRZxpNG_Pq24rVfDgeFndSADQxXP96mvQD2ti6k7CGY=
+    partnerId: NODAL_API_SUITE_ANA_000264
+  van:
+    secretId: GIj7GvEySFRhSfWkNvwY6abWkqRXz5GICBHkJenVSGI=
+    partnerId: VAN_ANA_000268
+  wallet:  
+    walletBaseTransferURL: https://dashboard.paytm.com/bpay/api/v1/disburse/order/wallet/gratification
+    bankAccountTransferBaseUrl: https://dashboard.paytm.com/bpay/api/v1/disburse/order/bank
+    transferStatusURL: https://dashboard.paytm.com/bpay/api/v1/disburse/order/query
+    getWalletBalance: https://dashboard.paytm.com/bpay/api/v1/account/list
+    transactionReportWallet: https://dashboard.paytm.com/bpay/api/v1/account/statement
+    accountVerify: https://dashboard.paytm.com/bpay/api/v1/beneficiary/validate
+ 
+    
+
+    accountVerifyCallBackApi: https://poapi.grezpay.com/adm/merchant/callBackApi
+
+    walletMid: Analyt67347605126132
+    walletKey: tMrLdfhOq5vkkIKZ
+
+
+
+axisCredentials:
+  beneUrl: https://saksham.axisbank.co.in/gateway/api/txb/v1/payee-mgmt/beneficiary-registration
+  fundUrl: https://saksham.axisbank.co.in/gateway/api/txb/v1/payments/transfer-payment
+  statusUrl: https://saksham.axisbank.co.in/gateway/api/txb/v1/acct-recon/get-status
+  p12Path: /home/ubuntu/pay.vpayapp.com.p12
+
+
+cashfreeCredentials:
+  authUrl: https://payout-api.cashfree.com/payout/v1/authorize
+  directtransferUrl: https://payout-api.cashfree.com/payout/v1/directTransfer
+  statusUrl : https://payout-api.cashfree.com/payout/v1/getTransferStatus?referenceId={referenceId}&transferId={orderid}
+paygCredentials:
+  addContact: https://paygapi.payg.in/payment/api/Payout/AddContact
+  fundTransfer: https://paygapi.payg.in/payment/api/PayOut/FundTransfer2
+  statusCheck: https://paygapi.payg.in/payment/api/PayOut/FundStatus
+
+  creds:
+    XClientId: CF115492C6OFP15JDDO8UP2KFUJG
+    XClientSecret: 239374f240a77ed439b62817d4b0da20c22a18ec
+safex:
+  requestUrl: https://payout.safexpay.com/agWalletAPI/v2/agg
+sark:
+  requestUrl: https://sarthi.sark.co.in/api/open/wallet/transaction
+  requestUpiUrl: https://sarthi.sark.co.in/api/upi/transaction
+  statusCheck: https://sarthi.sark.co.in/api/checkstatus
+razor:
+  acctransfer: https://api.razorpay.com/v1/payouts
+  statusReq: https://api.razorpay.com/v1/payouts
+
+neoCred:
+  authUrl: https://van.neokred.tech/va/v1/authenticate
+  settlementUrl: https://van.neokred.tech/va/v1/ecollect/settlement
+  paymentdetailsUrl: https://van.neokred.tech/va/v1/payment/details
+  newPaymentUrl: https://collectbot.neokred.tech/cf-svc/api/v1/external/direct-transfer
+  newStatusUrl: https://collectbot.neokred.tech/cf-svc/api/v1/external/transaction-status
+
+Pinwallet:
+  authUrl: https://app.pinwallet.in/api/token/create
+  newPaymentUrl: https://app.pinwallet.in/api/payout/dotransaction
+
+Kitzone:
+  encyptUrl: https://services.kitzone.in/api/UserServices/eEncryptRequest
+  paymentUrl: https://services.kitzone.in/api/UserServices/ekitzoneService
+  statusUrl: https://services.kitzone.in/api/UserServices/ekitzoneCheckTransactionStatus
+  stausUrlByOrderid: https://services.kitzone.in/api/UserServices/eKitzoneTransactionStatusByOrderId
+
+PayoutTransfers:
+  Account: CASHFREE
+  Wallet: PAYTM
+  Upi: CASHFREE
+  Status: CASHFREE
+  
+apiReportEndPoint: http://localhost:8082/
+
+reportArgument:
+  reportPath: /home/ubuntu/reports/
+  #reportPath: /home/ani/ezfile/
+  reportFileExpiry: 90
+  reportHeaderStyle:
+    font: Calibri
+    size: 12
+    bold: Y
+  reportDataStyle:
+    font: Calibri
+    size: 9
+    bold: N
+
+ipddress: 13.234.68.151

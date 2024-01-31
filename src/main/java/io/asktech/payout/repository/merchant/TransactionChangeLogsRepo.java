@@ -1,0 +1,9 @@
+package io.asktech.payout.repository.merchant;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import io.asktech.payout.modal.merchant.TransactionChangeLogs;
+
+public interface TransactionChangeLogsRepo extends JpaRepository<TransactionChangeLogs, String>{
+    
+}
